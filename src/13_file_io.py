@@ -35,3 +35,5 @@ bar.close()
 bar = open('bar.txt')
 
 print(bar.read())
+
+bar.close()

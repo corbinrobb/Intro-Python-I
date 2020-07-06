@@ -14,8 +14,13 @@ print(x)
 
 # Using y, change x so that it is [1, 2, 3, 4, 8, 9, 10]
 # YOUR CODE HERE
-for num in y:
-    x.append(num)
+
+# One Way
+# for num in y:
+#     x.append(num)
+
+# Another Way
+x.extend(y)
 
 print(x)
 
@@ -27,7 +32,7 @@ print(x)
 
 # Change x so that it is [1, 2, 3, 4, 9, 99, 10]
 # YOUR CODE HERE
-x.insert(5, 99)
+x.insert(-1, 99)
 
 print(x)
 

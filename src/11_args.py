@@ -42,9 +42,7 @@ print(f2(*a))    # Should print 22
 # YOUR CODE HERE
 
 def f3(num1, num2=None):
-    if num2 is None:
-        return num1 + 1
-    return num1 + num2
+    return num1 + 1 if num2 is None else num1 + num2
 
 
 print(f3(1, 2))  # Should print 3

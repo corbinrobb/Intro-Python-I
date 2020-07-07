@@ -33,14 +33,16 @@ from datetime import datetime
 
 today = datetime.now()
 
-def printCalender(year =today.year, month =today.month):
-    calendar.prmonth(year, month)
+def get_calendar():
+    def print_calender(year=today.year, month=today.month):
+        global calendar
+        calendar.prmonth(year, month)
 
+    if(len(sys.argv) == 3):
+        print_calender(int(sys.argv[1]), int(sys.argv[2]))
+    elif(len(sys.argv) == 2):
+        print_calender(int(sys.argv[1]))
+    else:
+        print_calender()
 
-
-if(len(sys.argv) == 3):
-    printCalender(int(sys.argv[1]), int(sys.argv[2]))
-elif(len(sys.argv) == 2):
-    printCalender(int(sys.argv[1]))
-else:
-    printCalender()
+get_calendar()
